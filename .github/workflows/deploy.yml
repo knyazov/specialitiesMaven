@@ -1,13 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# GitHub recommends pinning actions to a commit SHA.
-# To get a newer version, you will need to update the SHA.
-# You can also reference a tag or branch, but the action may change without warning.
-
-name: Java CI/CD
+name: Specialities CI/CD
 
 on: [push]
 
@@ -23,17 +14,4 @@ jobs:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
-      run: mvn --batch-mode --update-snapshots verify
-      # - name: Run chmod to make gradlew executable
-      #   run: chmod +x ./gradlew
-      # - name: Validate Gradle wrapper
-      #   uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
-      # - name: Run the Gradle package task
-      #   uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-      #   with:
-      #     arguments: build
-      # - uses: AkhileshNS/heroku-deploy@v3.12.12
-      #   with:
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: "specialities" #Must be unique in Heroku
-      #     heroku_email: "tantrumak@gmail.com"
+        run: mvn --batch-mode --update-snapshots verify
